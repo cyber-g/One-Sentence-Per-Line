@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
         const text = document.getText(selection);
 
         // Search and replace to split sentences into new lines
-        const modifiedText = text.replace(/([.!?])\s*/g, '$1\n');
+        const modifiedText = text.replace(/([.!?])\s+/g, '$1\n');
 
         editor.edit(editBuilder => {
             editBuilder.replace(selection, modifiedText);
