@@ -1,73 +1,26 @@
 # One-Sentence-Per-Line
 One Sentence Per Line is an extension for Visual Studio Code that transforms selections of single line paragraph to "one sentence per line"
 
+## Compilation
+(Based on : [Publishing Extensions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension))
 
-<!-- After writing up a brief description, we recommend including the following sections.
+To compile the extension, you need to have `Node.js` and `npm` installed. Then, run the following command in the root directory of the project:
 
-## Features
+```bash
+npx vsce package
+```
+This will create a `.vsix` file in the root directory of the project. You can then install this file in Visual Studio Code:
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+```
+code --install-extension one-sentence-per-line-1.0.0.vsix
+```
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
+1. Select the text you want to transform.
+2. Press `Ctrl+Shift+P` to open the command palette.
+3. Type "One Sentence Per Line" and select the command.
+4. The selected text will be transformed to "one sentence per line".
 
-\!\[feature X\]\(images/feature-x.png\)
+## License
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!** -->
