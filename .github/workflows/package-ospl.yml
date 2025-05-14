@@ -1,0 +1,35 @@
+name: Package VS Code Extension OSPL
+# This workflow packages the OSPL VS Code extension and uploads the .vsix file as an artifact.
+
+on:
+  push:
+    branches:
+      - main
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install vsce
+        run: npm install -g @vscode/vsce
+
+      - name: Package extension
+        run: vsce package
+
+      - name: Upload packaged extension artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsix-package
+          path: ./*.vsix
