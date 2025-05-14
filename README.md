@@ -21,6 +21,10 @@ code --install-extension one-sentence-per-line-1.0.0.vsix
 3. Type "One Sentence Per Line" and select the command.
 4. The selected text will be transformed to "one sentence per line".
 
+## CI/CD
+Get the latest packaged version of the extension from: 
+https://github.com/cyber-g/One-Sentence-Per-Line/actions/workflows/package-ospl.yml
+
 ## License
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
 
